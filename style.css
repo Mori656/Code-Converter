@@ -1,0 +1,82 @@
+:root{
+  --gap: 12px;
+  --bg: #f7f8fa;
+  --pane-bg: #ffffff;
+  --accent: #2b6cb0;
+  --muted: #6b7280;
+}
+
+*{
+    box-sizing:border-box
+}
+
+html,body{
+    height:100%;margin:0;
+    font-family:Segoe UI,Roboto,Arial,sans-serif;
+    background:var(--bg);
+    color:#111;
+}
+
+.container{
+  display:flex;
+  gap:var(--gap);
+  padding:var(--gap);
+  height:100vh;
+}
+
+.pane{
+  background:var(--pane-bg);
+  border-radius:8px;
+  box-shadow:0 1px 4px rgba(0,0,0,0.06);
+  padding:12px;
+  display:flex;
+  flex-direction:column;
+  min-height:0;
+}
+
+.left, .right{flex:1;}
+
+/* Titles */
+.pane-title{
+  font-weight:600;
+  color:var(--accent);
+  margin-bottom:8px;
+}
+
+/* Textarea */
+#code_area{
+  width:100%;
+  height:100%;
+  resize:none;
+  border:1px solid #e5e7eb;
+  border-radius:6px;
+  padding:12px;
+  font-family:Consolas,Monaco,monospace;
+  font-size:14px;
+  line-height:1.45;
+  background:#fff;
+  color:#111;
+  overflow:auto;
+}
+
+/* Preview */
+.preview{
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:12px;
+  border:1px dashed #e6e9ef;
+  border-radius:6px;
+  background:linear-gradient(180deg,#fff,#fbfdff);
+  font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+  font-size:14px;
+  color:#111;
+  overflow:auto;
+  white-space:pre-wrap;
+  word-wrap:break-word;
+}
+
+@media (max-width:800px){
+  .container{flex-direction:column}
+  .left, .right{height:50vh}
+}
