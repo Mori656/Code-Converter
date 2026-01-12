@@ -1,41 +1,6 @@
 from antlr4 import *
-from MarkdownParserVisitor import MarkdownParserVisitor
-from MarkdownParser import MarkdownParser
-
-class ListItem:
-    def __init__(self, text, indent):
-        self.text = text
-        self.children = []
-        self.indent = indent
-
-def nest_items(items):
-    stack = []
-    root = []
-
-    for item in items:
-        while stack and stack[-1].indent >= item.indent:
-            stack.pop()
-
-        if stack:
-            stack[-1].children.append(item)
-        else:
-            root.append(item)
-
-        stack.append(item)
-
-    return root
-
-
-def render_list(items):
-    html = "<ul>\n"
-    for item in items:
-        if item.children:
-            html += render_list(item.children)
-        else:
-            html += f"<li>{item.text}</li>\n"
-    html += "</ul>\n"
-    return html
-
+from antlr.MarkdownParserVisitor import MarkdownParserVisitor
+from antlr.MarkdownParser import MarkdownParser
 
 
 class MarkdownToHtmlVisitor(MarkdownParserVisitor):
@@ -91,6 +56,9 @@ class MarkdownToHtmlVisitor(MarkdownParserVisitor):
 
     def visitItalicText(self, ctx: MarkdownParser.ItalicTextContext):
         return f"<em>{self.visitChildrenAsText(ctx)}</em>"
+    
+    def visitStrikethroughText(self, ctx:MarkdownParser.StrikethroughTextContext):
+        return f"<del>{self.visitChildrenAsText(ctx)}</del>"
 
     def visitCodeSpan(self, ctx: MarkdownParser.CodeSpanContext):
         return f"<code>{ctx.getText().strip('`')}</code>"
@@ -102,6 +70,12 @@ class MarkdownToHtmlVisitor(MarkdownParserVisitor):
         return self.visitChildrenAsText(ctx)
     
     def visitInlineElementNoBold(self, ctx: MarkdownParser.InlineElementNoBoldContext):
+        return self.visitChildrenAsText(ctx)
+    
+    def visitInlineElementNoStrikethrough(self, ctx):
+        return self.visitChildrenAsText(ctx)
+    
+    def visitInlineElementNoLink(self, ctx):
         return self.visitChildrenAsText(ctx)
 
     # ======================
@@ -128,33 +102,42 @@ class MarkdownToHtmlVisitor(MarkdownParserVisitor):
     # Listy
     # ======================
 
-    # def visitUnorderedList(self, ctx: MarkdownParser.UnorderedListContext):
-    #     return f"<ul>\n{self.visitInlineListElement(ctx)}</ul>\n"
     def visitUnorderedList(self, ctx: MarkdownParser.UnorderedListContext):
-        items = []
-
-        for child in ctx.unorderedListItem():
-            item = child.accept(self)
-            items.append(item)
-
-        nested = nest_items(items)
-        return render_list(nested)
+        return f"<ul>\n{self.visitInlineListElement(ctx)}</ul>\n"
 
     def visitOrderedList(self, ctx: MarkdownParser.OrderedListContext):
         return f"<ol>\n{self.visitInlineListElement(ctx)}</ol>\n"
 
-    # def visitUnorderedListItem(self, ctx: MarkdownParser.UnorderedListItemContext):
-        # return f"<li>{self.visitInlineListElement(ctx)}</li>\n"
     def visitUnorderedListItem(self, ctx: MarkdownParser.UnorderedListItemContext):
-        indent = ( len(ctx.SPACE().getText()) if ctx.SPACE() else 0 )
-        text = self.visitInlineListElement(ctx)
-        return  (text, indent)
+        return f"<li>{self.visitInlineListElement(ctx)}</li>\n"
 
     def visitOrderedListItem(self, ctx: MarkdownParser.OrderedListItemContext):
         return f"<li>{self.visitInlineListElement(ctx)}</li>\n"
 
     def visitInlineListElement(self, ctx: MarkdownParser.InlineListElementContext):
         return self.visitChildrenAsText(ctx)
+
+    # ======================
+    # Cytat
+    # ======================
+
+    def visitBlockquote(self, ctx:MarkdownParser.BlockquoteContext):
+        return f"<blockquote>{self.visitInlineElement(ctx)}</blockquote>\n"
+    
+    # ======================
+    # Link
+    # ======================
+
+    def visitLink(self, ctx):
+        href = self.visit(ctx.text())
+        label = ''.join(self.visit(e) for e in ctx.linkText().inlineElementNoLink())
+        return f'<a href="{href}">{label}</a>'
+
+    def visitImage(self, ctx):
+        link = ctx.link()
+        src = self.visit(link.text())
+        alt = ''.join(self.visit(e) for e in link.linkText().inlineElementNoLink())
+        return f'<img src="{src}" alt="{alt}">'
 
     # ======================
     # Tekst

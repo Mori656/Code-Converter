@@ -154,11 +154,6 @@ class MarkdownParserVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by MarkdownParser#breakline.
-    def visitBreakline(self, ctx:MarkdownParser.BreaklineContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by MarkdownParser#text.
     def visitText(self, ctx:MarkdownParser.TextContext):
         return self.visitChildren(ctx)

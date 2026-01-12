@@ -1,10 +1,11 @@
 from antlr4 import *
-from MarkdownLexer import MarkdownLexer
-from MarkdownParser import MarkdownParser
-from HtmlVisitor import MarkdownToHtmlVisitor as HtmlVisitor
+from antlr.MarkdownLexer import MarkdownLexer
+from antlr.MarkdownParser import MarkdownParser
+from antlr.HtmlVisitor import MarkdownToHtmlVisitor as HtmlVisitor
 
 def test_markdown_parsing():
     input_stream = FileStream("test.md", encoding="utf-8")
+    print(type(input_stream))
     lexer = MarkdownLexer(input_stream)
     tokens = CommonTokenStream(lexer)
 
@@ -33,11 +34,13 @@ def markdown_to_html(markdown: str) -> str:
     parser = MarkdownParser(tokens)
     tree = parser.document()
 
-    visitor = MarkdownToHtmlVisitor()
+    visitor = HtmlVisitor()
     html = visitor.visit(tree)
 
     return html
 
 if __name__ == "__main__":
-    print("Running markdown parser ...")
-    test_markdown_parsing()
+    # print("Running markdown parser ...")
+    # test_markdown_parsing()
+    html = markdown_to_html("*test*\n")
+    print(html)

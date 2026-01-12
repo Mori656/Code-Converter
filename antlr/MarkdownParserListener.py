@@ -269,15 +269,6 @@ class MarkdownParserListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by MarkdownParser#breakline.
-    def enterBreakline(self, ctx:MarkdownParser.BreaklineContext):
-        pass
-
-    # Exit a parse tree produced by MarkdownParser#breakline.
-    def exitBreakline(self, ctx:MarkdownParser.BreaklineContext):
-        pass
-
-
     # Enter a parse tree produced by MarkdownParser#text.
     def enterText(self, ctx:MarkdownParser.TextContext):
         pass

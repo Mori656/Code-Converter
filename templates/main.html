@@ -4,31 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Converter</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <script type="module" src="/static/script.js"></script>
 </head>
 <body>
   <div class="container">
     <div class="pane left">
       <label for="code-area" class="pane-title">Markdown (wejście)</label>
       <textarea name="code-area" id="code-area" placeholder="Wpisz markdown..."></textarea>
+      <button id="convert-btn">Przekonwertuj</button>
     </div>
 
     <div class="pane right">
-      <div class="pane-title">Podgląd</div>
-      <pre id="preview" class="preview" aria-live="polite"></pre>
+      <button id="preview-btn">Podgląd</button>
+      <button id="preview-raw-btn">Kod HTML</button>
+      <div id="preview" class="preview" aria-live="polite"></div>
+      <pre id="preview-raw" class="preview" aria-live="polite" style="display: none"></pre>
     </div>
   </div>
-
-  <script>
-    const ta = document.getElementById('code-area');
-    const preview = document.getElementById('preview');
-
-    function updatePreview() {
-      preview.textContent = ta.value;
-    }
-
-    ta.addEventListener('input', updatePreview);
-    updatePreview();
-  </script>
 </body>
 </html>
