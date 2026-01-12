@@ -10,39 +10,42 @@ else:
 
 def serializedATN():
     return [
-        4,1,20,107,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,20,117,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
-        1,0,1,0,1,1,1,1,1,1,1,1,5,1,35,8,1,10,1,12,1,38,9,1,1,2,1,2,1,3,
-        1,3,1,3,1,3,5,3,46,8,3,10,3,12,3,49,9,3,1,4,1,4,1,5,1,5,1,5,1,5,
-        5,5,57,8,5,10,5,12,5,60,9,5,1,6,1,6,1,7,1,7,1,7,1,7,5,7,68,8,7,10,
-        7,12,7,71,9,7,1,8,1,8,1,9,1,9,1,9,1,9,3,9,79,8,9,1,10,1,10,1,10,
-        1,10,1,10,1,10,1,10,1,10,1,11,1,11,4,11,91,8,11,11,11,12,11,92,1,
-        12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,3,12,103,8,12,1,13,1,13,1,
-        13,0,0,14,0,2,4,6,8,10,12,14,16,18,20,22,24,26,0,5,2,0,12,14,16,
-        16,1,0,8,9,1,0,10,11,1,0,6,7,1,0,16,18,101,0,28,1,0,0,0,2,30,1,0,
-        0,0,4,39,1,0,0,0,6,41,1,0,0,0,8,50,1,0,0,0,10,52,1,0,0,0,12,61,1,
-        0,0,0,14,63,1,0,0,0,16,72,1,0,0,0,18,78,1,0,0,0,20,80,1,0,0,0,22,
-        88,1,0,0,0,24,102,1,0,0,0,26,104,1,0,0,0,28,29,3,2,1,0,29,1,1,0,
-        0,0,30,36,3,6,3,0,31,32,3,4,2,0,32,33,3,6,3,0,33,35,1,0,0,0,34,31,
-        1,0,0,0,35,38,1,0,0,0,36,34,1,0,0,0,36,37,1,0,0,0,37,3,1,0,0,0,38,
-        36,1,0,0,0,39,40,7,0,0,0,40,5,1,0,0,0,41,47,3,10,5,0,42,43,3,8,4,
-        0,43,44,3,10,5,0,44,46,1,0,0,0,45,42,1,0,0,0,46,49,1,0,0,0,47,45,
-        1,0,0,0,47,48,1,0,0,0,48,7,1,0,0,0,49,47,1,0,0,0,50,51,7,1,0,0,51,
-        9,1,0,0,0,52,58,3,14,7,0,53,54,3,12,6,0,54,55,3,14,7,0,55,57,1,0,
-        0,0,56,53,1,0,0,0,57,60,1,0,0,0,58,56,1,0,0,0,58,59,1,0,0,0,59,11,
-        1,0,0,0,60,58,1,0,0,0,61,62,7,2,0,0,62,13,1,0,0,0,63,69,3,18,9,0,
-        64,65,3,16,8,0,65,66,3,18,9,0,66,68,1,0,0,0,67,64,1,0,0,0,68,71,
-        1,0,0,0,69,67,1,0,0,0,69,70,1,0,0,0,70,15,1,0,0,0,71,69,1,0,0,0,
-        72,73,7,3,0,0,73,17,1,0,0,0,74,79,3,20,10,0,75,79,3,22,11,0,76,79,
-        3,26,13,0,77,79,3,24,12,0,78,74,1,0,0,0,78,75,1,0,0,0,78,76,1,0,
-        0,0,78,77,1,0,0,0,79,19,1,0,0,0,80,81,5,16,0,0,81,82,5,2,0,0,82,
-        83,3,0,0,0,83,84,5,3,0,0,84,85,5,2,0,0,85,86,3,0,0,0,86,87,5,3,0,
-        0,87,21,1,0,0,0,88,90,5,15,0,0,89,91,3,18,9,0,90,89,1,0,0,0,91,92,
-        1,0,0,0,92,90,1,0,0,0,92,93,1,0,0,0,93,23,1,0,0,0,94,95,5,2,0,0,
-        95,96,3,0,0,0,96,97,5,3,0,0,97,103,1,0,0,0,98,99,5,4,0,0,99,100,
-        3,0,0,0,100,101,5,5,0,0,101,103,1,0,0,0,102,94,1,0,0,0,102,98,1,
-        0,0,0,103,25,1,0,0,0,104,105,7,4,0,0,105,27,1,0,0,0,7,36,47,58,69,
-        78,92,102
+        2,14,7,14,2,15,7,15,1,0,1,0,1,1,1,1,1,1,1,1,5,1,39,8,1,10,1,12,1,
+        42,9,1,1,2,1,2,1,3,1,3,1,3,1,3,5,3,50,8,3,10,3,12,3,53,9,3,1,4,1,
+        4,1,5,1,5,1,5,1,5,5,5,61,8,5,10,5,12,5,64,9,5,1,6,1,6,1,7,1,7,1,
+        7,1,7,5,7,72,8,7,10,7,12,7,75,9,7,1,8,1,8,1,9,1,9,1,9,1,9,1,9,1,
+        9,3,9,85,8,9,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,11,1,11,4,
+        11,97,8,11,11,11,12,11,98,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,
+        3,12,109,8,12,1,13,1,13,1,14,1,14,1,15,1,15,1,15,0,0,16,0,2,4,6,
+        8,10,12,14,16,18,20,22,24,26,28,30,0,4,2,0,12,14,16,16,1,0,8,9,1,
+        0,10,11,1,0,6,7,111,0,32,1,0,0,0,2,34,1,0,0,0,4,43,1,0,0,0,6,45,
+        1,0,0,0,8,54,1,0,0,0,10,56,1,0,0,0,12,65,1,0,0,0,14,67,1,0,0,0,16,
+        76,1,0,0,0,18,84,1,0,0,0,20,86,1,0,0,0,22,94,1,0,0,0,24,108,1,0,
+        0,0,26,110,1,0,0,0,28,112,1,0,0,0,30,114,1,0,0,0,32,33,3,2,1,0,33,
+        1,1,0,0,0,34,40,3,6,3,0,35,36,3,4,2,0,36,37,3,6,3,0,37,39,1,0,0,
+        0,38,35,1,0,0,0,39,42,1,0,0,0,40,38,1,0,0,0,40,41,1,0,0,0,41,3,1,
+        0,0,0,42,40,1,0,0,0,43,44,7,0,0,0,44,5,1,0,0,0,45,51,3,10,5,0,46,
+        47,3,8,4,0,47,48,3,10,5,0,48,50,1,0,0,0,49,46,1,0,0,0,50,53,1,0,
+        0,0,51,49,1,0,0,0,51,52,1,0,0,0,52,7,1,0,0,0,53,51,1,0,0,0,54,55,
+        7,1,0,0,55,9,1,0,0,0,56,62,3,14,7,0,57,58,3,12,6,0,58,59,3,14,7,
+        0,59,61,1,0,0,0,60,57,1,0,0,0,61,64,1,0,0,0,62,60,1,0,0,0,62,63,
+        1,0,0,0,63,11,1,0,0,0,64,62,1,0,0,0,65,66,7,2,0,0,66,13,1,0,0,0,
+        67,73,3,18,9,0,68,69,3,16,8,0,69,70,3,18,9,0,70,72,1,0,0,0,71,68,
+        1,0,0,0,72,75,1,0,0,0,73,71,1,0,0,0,73,74,1,0,0,0,74,15,1,0,0,0,
+        75,73,1,0,0,0,76,77,7,3,0,0,77,17,1,0,0,0,78,85,3,20,10,0,79,85,
+        3,22,11,0,80,85,3,26,13,0,81,85,3,28,14,0,82,85,3,30,15,0,83,85,
+        3,24,12,0,84,78,1,0,0,0,84,79,1,0,0,0,84,80,1,0,0,0,84,81,1,0,0,
+        0,84,82,1,0,0,0,84,83,1,0,0,0,85,19,1,0,0,0,86,87,5,16,0,0,87,88,
+        5,2,0,0,88,89,3,0,0,0,89,90,5,3,0,0,90,91,5,2,0,0,91,92,3,0,0,0,
+        92,93,5,3,0,0,93,21,1,0,0,0,94,96,5,15,0,0,95,97,3,18,9,0,96,95,
+        1,0,0,0,97,98,1,0,0,0,98,96,1,0,0,0,98,99,1,0,0,0,99,23,1,0,0,0,
+        100,101,5,2,0,0,101,102,3,0,0,0,102,103,5,3,0,0,103,109,1,0,0,0,
+        104,105,5,4,0,0,105,106,3,0,0,0,106,107,5,5,0,0,107,109,1,0,0,0,
+        108,100,1,0,0,0,108,104,1,0,0,0,109,25,1,0,0,0,110,111,5,17,0,0,
+        111,27,1,0,0,0,112,113,5,18,0,0,113,29,1,0,0,0,114,115,5,16,0,0,
+        115,31,1,0,0,0,7,40,51,62,73,84,98,108
     ]
 
 class LatexParser ( Parser ):
@@ -76,12 +79,14 @@ class LatexParser ( Parser ):
     RULE_fracExpr = 10
     RULE_functionExpr = 11
     RULE_group = 12
-    RULE_atom = 13
+    RULE_numberAtom = 13
+    RULE_identAtom = 14
+    RULE_commandAtom = 15
 
     ruleNames =  [ "expr", "relationExpr", "relationOp", "additiveExpr", 
                    "addOp", "multiplicativeExpr", "multOp", "postfixExpr", 
                    "postfixOp", "primaryExpr", "fracExpr", "functionExpr", 
-                   "group", "atom" ]
+                   "group", "numberAtom", "identAtom", "commandAtom" ]
 
     EOF = Token.EOF
     BACKSLASH=1
@@ -151,7 +156,7 @@ class LatexParser ( Parser ):
         self.enterRule(localctx, 0, self.RULE_expr)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 28
+            self.state = 32
             self.relationExpr()
         except RecognitionException as re:
             localctx.exception = re
@@ -210,17 +215,17 @@ class LatexParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 30
+            self.state = 34
             self.additiveExpr()
-            self.state = 36
+            self.state = 40
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & 94208) != 0):
-                self.state = 31
+                self.state = 35
                 self.relationOp()
-                self.state = 32
+                self.state = 36
                 self.additiveExpr()
-                self.state = 38
+                self.state = 42
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -279,7 +284,7 @@ class LatexParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 39
+            self.state = 43
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 94208) != 0)):
                 self._errHandler.recoverInline(self)
@@ -343,17 +348,17 @@ class LatexParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 41
+            self.state = 45
             self.multiplicativeExpr()
-            self.state = 47
+            self.state = 51
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==8 or _la==9:
-                self.state = 42
+                self.state = 46
                 self.addOp()
-                self.state = 43
+                self.state = 47
                 self.multiplicativeExpr()
-                self.state = 49
+                self.state = 53
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -406,7 +411,7 @@ class LatexParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 50
+            self.state = 54
             _la = self._input.LA(1)
             if not(_la==8 or _la==9):
                 self._errHandler.recoverInline(self)
@@ -470,17 +475,17 @@ class LatexParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 52
+            self.state = 56
             self.postfixExpr()
-            self.state = 58
+            self.state = 62
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==10 or _la==11:
-                self.state = 53
+                self.state = 57
                 self.multOp()
-                self.state = 54
+                self.state = 58
                 self.postfixExpr()
-                self.state = 60
+                self.state = 64
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -533,7 +538,7 @@ class LatexParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 61
+            self.state = 65
             _la = self._input.LA(1)
             if not(_la==10 or _la==11):
                 self._errHandler.recoverInline(self)
@@ -597,17 +602,17 @@ class LatexParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 63
+            self.state = 67
             self.primaryExpr()
-            self.state = 69
+            self.state = 73
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==6 or _la==7:
-                self.state = 64
+                self.state = 68
                 self.postfixOp()
-                self.state = 65
+                self.state = 69
                 self.primaryExpr()
-                self.state = 71
+                self.state = 75
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -660,7 +665,7 @@ class LatexParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 72
+            self.state = 76
             _la = self._input.LA(1)
             if not(_la==6 or _la==7):
                 self._errHandler.recoverInline(self)
@@ -691,8 +696,16 @@ class LatexParser ( Parser ):
             return self.getTypedRuleContext(LatexParser.FunctionExprContext,0)
 
 
-        def atom(self):
-            return self.getTypedRuleContext(LatexParser.AtomContext,0)
+        def numberAtom(self):
+            return self.getTypedRuleContext(LatexParser.NumberAtomContext,0)
+
+
+        def identAtom(self):
+            return self.getTypedRuleContext(LatexParser.IdentAtomContext,0)
+
+
+        def commandAtom(self):
+            return self.getTypedRuleContext(LatexParser.CommandAtomContext,0)
 
 
         def group(self):
@@ -724,30 +737,42 @@ class LatexParser ( Parser ):
         localctx = LatexParser.PrimaryExprContext(self, self._ctx, self.state)
         self.enterRule(localctx, 18, self.RULE_primaryExpr)
         try:
-            self.state = 78
+            self.state = 84
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,4,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 74
+                self.state = 78
                 self.fracExpr()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 75
+                self.state = 79
                 self.functionExpr()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 76
-                self.atom()
+                self.state = 80
+                self.numberAtom()
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 77
+                self.state = 81
+                self.identAtom()
+                pass
+
+            elif la_ == 5:
+                self.enterOuterAlt(localctx, 5)
+                self.state = 82
+                self.commandAtom()
+                pass
+
+            elif la_ == 6:
+                self.enterOuterAlt(localctx, 6)
+                self.state = 83
                 self.group()
                 pass
 
@@ -816,19 +841,19 @@ class LatexParser ( Parser ):
         self.enterRule(localctx, 20, self.RULE_fracExpr)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 80
-            self.match(LatexParser.COMMAND)
-            self.state = 81
-            self.match(LatexParser.LBRACE)
-            self.state = 82
-            self.expr()
-            self.state = 83
-            self.match(LatexParser.RBRACE)
-            self.state = 84
-            self.match(LatexParser.LBRACE)
-            self.state = 85
-            self.expr()
             self.state = 86
+            self.match(LatexParser.COMMAND)
+            self.state = 87
+            self.match(LatexParser.LBRACE)
+            self.state = 88
+            self.expr()
+            self.state = 89
+            self.match(LatexParser.RBRACE)
+            self.state = 90
+            self.match(LatexParser.LBRACE)
+            self.state = 91
+            self.expr()
+            self.state = 92
             self.match(LatexParser.RBRACE)
         except RecognitionException as re:
             localctx.exception = re
@@ -882,19 +907,19 @@ class LatexParser ( Parser ):
         self.enterRule(localctx, 22, self.RULE_functionExpr)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 88
+            self.state = 94
             self.match(LatexParser.FUNCTIONCMD)
-            self.state = 90 
+            self.state = 96 
             self._errHandler.sync(self)
             _alt = 1
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt == 1:
-                    self.state = 89
+                    self.state = 95
                     self.primaryExpr()
 
                 else:
                     raise NoViableAltException(self)
-                self.state = 92 
+                self.state = 98 
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,5,self._ctx)
 
@@ -955,25 +980,25 @@ class LatexParser ( Parser ):
         localctx = LatexParser.GroupContext(self, self._ctx, self.state)
         self.enterRule(localctx, 24, self.RULE_group)
         try:
-            self.state = 102
+            self.state = 108
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [2]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 94
+                self.state = 100
                 self.match(LatexParser.LBRACE)
-                self.state = 95
+                self.state = 101
                 self.expr()
-                self.state = 96
+                self.state = 102
                 self.match(LatexParser.RBRACE)
                 pass
             elif token in [4]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 98
+                self.state = 104
                 self.match(LatexParser.LPAREN)
-                self.state = 99
+                self.state = 105
                 self.expr()
-                self.state = 100
+                self.state = 106
                 self.match(LatexParser.RPAREN)
                 pass
             else:
@@ -988,7 +1013,7 @@ class LatexParser ( Parser ):
         return localctx
 
 
-    class AtomContext(ParserRuleContext):
+    class NumberAtomContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -998,46 +1023,128 @@ class LatexParser ( Parser ):
         def NUMBER(self):
             return self.getToken(LatexParser.NUMBER, 0)
 
-        def IDENT(self):
-            return self.getToken(LatexParser.IDENT, 0)
-
-        def COMMAND(self):
-            return self.getToken(LatexParser.COMMAND, 0)
-
         def getRuleIndex(self):
-            return LatexParser.RULE_atom
+            return LatexParser.RULE_numberAtom
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAtom" ):
-                listener.enterAtom(self)
+            if hasattr( listener, "enterNumberAtom" ):
+                listener.enterNumberAtom(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAtom" ):
-                listener.exitAtom(self)
+            if hasattr( listener, "exitNumberAtom" ):
+                listener.exitNumberAtom(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAtom" ):
-                return visitor.visitAtom(self)
+            if hasattr( visitor, "visitNumberAtom" ):
+                return visitor.visitNumberAtom(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def atom(self):
+    def numberAtom(self):
 
-        localctx = LatexParser.AtomContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 26, self.RULE_atom)
-        self._la = 0 # Token type
+        localctx = LatexParser.NumberAtomContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 26, self.RULE_numberAtom)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 104
-            _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 458752) != 0)):
-                self._errHandler.recoverInline(self)
+            self.state = 110
+            self.match(LatexParser.NUMBER)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class IdentAtomContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def IDENT(self):
+            return self.getToken(LatexParser.IDENT, 0)
+
+        def getRuleIndex(self):
+            return LatexParser.RULE_identAtom
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterIdentAtom" ):
+                listener.enterIdentAtom(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitIdentAtom" ):
+                listener.exitIdentAtom(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIdentAtom" ):
+                return visitor.visitIdentAtom(self)
             else:
-                self._errHandler.reportMatch(self)
-                self.consume()
+                return visitor.visitChildren(self)
+
+
+
+
+    def identAtom(self):
+
+        localctx = LatexParser.IdentAtomContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 28, self.RULE_identAtom)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 112
+            self.match(LatexParser.IDENT)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class CommandAtomContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def COMMAND(self):
+            return self.getToken(LatexParser.COMMAND, 0)
+
+        def getRuleIndex(self):
+            return LatexParser.RULE_commandAtom
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterCommandAtom" ):
+                listener.enterCommandAtom(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitCommandAtom" ):
+                listener.exitCommandAtom(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCommandAtom" ):
+                return visitor.visitCommandAtom(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def commandAtom(self):
+
+        localctx = LatexParser.CommandAtomContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 30, self.RULE_commandAtom)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 114
+            self.match(LatexParser.COMMAND)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)

@@ -125,12 +125,30 @@ class LatexParserListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by LatexParser#atom.
-    def enterAtom(self, ctx:LatexParser.AtomContext):
+    # Enter a parse tree produced by LatexParser#numberAtom.
+    def enterNumberAtom(self, ctx:LatexParser.NumberAtomContext):
         pass
 
-    # Exit a parse tree produced by LatexParser#atom.
-    def exitAtom(self, ctx:LatexParser.AtomContext):
+    # Exit a parse tree produced by LatexParser#numberAtom.
+    def exitNumberAtom(self, ctx:LatexParser.NumberAtomContext):
+        pass
+
+
+    # Enter a parse tree produced by LatexParser#identAtom.
+    def enterIdentAtom(self, ctx:LatexParser.IdentAtomContext):
+        pass
+
+    # Exit a parse tree produced by LatexParser#identAtom.
+    def exitIdentAtom(self, ctx:LatexParser.IdentAtomContext):
+        pass
+
+
+    # Enter a parse tree produced by LatexParser#commandAtom.
+    def enterCommandAtom(self, ctx:LatexParser.CommandAtomContext):
+        pass
+
+    # Exit a parse tree produced by LatexParser#commandAtom.
+    def exitCommandAtom(self, ctx:LatexParser.CommandAtomContext):
         pass
 
 

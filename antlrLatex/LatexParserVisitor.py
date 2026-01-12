@@ -74,8 +74,18 @@ class LatexParserVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by LatexParser#atom.
-    def visitAtom(self, ctx:LatexParser.AtomContext):
+    # Visit a parse tree produced by LatexParser#numberAtom.
+    def visitNumberAtom(self, ctx:LatexParser.NumberAtomContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by LatexParser#identAtom.
+    def visitIdentAtom(self, ctx:LatexParser.IdentAtomContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by LatexParser#commandAtom.
+    def visitCommandAtom(self, ctx:LatexParser.CommandAtomContext):
         return self.visitChildren(ctx)
 
 
