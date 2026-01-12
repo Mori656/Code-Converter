@@ -12,12 +12,14 @@
     <div class="pane left">
       <label for="code-area" class="pane-title">Markdown (wejście)</label>
       <textarea name="code-area" id="code-area" placeholder="Wpisz markdown..."></textarea>
-      <button id="convert-btn">Przekonwertuj</button>
+      <button id="convert-btn" class="convert-btn button">Przekonwertuj</button>
     </div>
 
     <div class="pane right">
-      <button id="preview-btn">Podgląd</button>
-      <button id="preview-raw-btn">Kod HTML</button>
+      <div class="buttons-container">
+        <button id="preview-btn" class="preview-btn button">Podgląd</button>
+        <button id="preview-raw-btn" class="preview-raw-btn button">Kod HTML</button>
+      </div>
       <div id="preview" class="preview" aria-live="polite"></div>
       <pre id="preview-raw" class="preview" aria-live="polite" style="display: none"></pre>
     </div>

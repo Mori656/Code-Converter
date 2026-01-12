@@ -18,6 +18,7 @@ html,body{
 }
 
 .container{
+  background-color: rgb(152, 196, 212);
   display:flex;
   gap:var(--gap);
   padding:var(--gap);
@@ -32,6 +33,7 @@ html,body{
   display:flex;
   flex-direction:column;
   min-height:0;
+  background-color: rgb(48, 47, 47);
 }
 
 .left, .right{flex:1;}
@@ -39,15 +41,15 @@ html,body{
 /* Titles */
 .pane-title{
   font-weight:600;
-  color:var(--accent);
+  color: lightblue;
   margin-bottom:8px;
 }
 
 /* Textarea */
-#code_area{
+#code-area{
   width:100%;
   height:100%;
-  resize:none;
+  resize: none;
   border:1px solid #e5e7eb;
   border-radius:6px;
   padding:12px;
@@ -57,6 +59,7 @@ html,body{
   background:#fff;
   color:#111;
   overflow:auto;
+  scrollbar-color: lightblue #f7f8fa;
 }
 
 /* Preview */
@@ -74,9 +77,32 @@ html,body{
   overflow:auto;
   white-space:pre-wrap;
   word-wrap:break-word;
+  scrollbar-color: lightblue #f7f8fa;
+}
+
+.button{
+  background-color: lightblue;
+  color:#000;
+  border:none;
+  border-radius:6px;
+  padding:10px 16px;
+  margin: 6px 2px 6px 2px;
+  font-size:14px;
+  cursor:pointer;
+  flex: 1;
+}
+.button:hover{
+  background-color: #ffae3c;
+}
+
+.buttons-container{
+  display:flex;
+  justify-content:flex-end;
+  width: 100%;
 }
 
 @media (max-width:800px){
   .container{flex-direction:column}
   .left, .right{height:50vh}
+  #code-area, .preview{max-width:95vw}
 }
