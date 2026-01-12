@@ -224,6 +224,15 @@ class MarkdownParserListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by MarkdownParser#latexBlock.
+    def enterLatexBlock(self, ctx:MarkdownParser.LatexBlockContext):
+        pass
+
+    # Exit a parse tree produced by MarkdownParser#latexBlock.
+    def exitLatexBlock(self, ctx:MarkdownParser.LatexBlockContext):
+        pass
+
+
     # Enter a parse tree produced by MarkdownParser#unorderedList.
     def enterUnorderedList(self, ctx:MarkdownParser.UnorderedListContext):
         pass

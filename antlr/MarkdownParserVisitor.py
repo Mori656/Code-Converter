@@ -129,6 +129,11 @@ class MarkdownParserVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by MarkdownParser#latexBlock.
+    def visitLatexBlock(self, ctx:MarkdownParser.LatexBlockContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by MarkdownParser#unorderedList.
     def visitUnorderedList(self, ctx:MarkdownParser.UnorderedListContext):
         return self.visitChildren(ctx)

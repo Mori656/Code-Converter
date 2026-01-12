@@ -99,6 +99,14 @@ class MarkdownToHtmlVisitor(MarkdownParserVisitor):
         return f"<pre><code>{code}</code></pre>\n"
 
     # ======================
+    # LaTeX
+    # ======================
+
+    def visitLatexBlock(self, ctx: MarkdownParser.LatexBlockContext):
+        latex = ctx.getText().replace("$", "").strip()
+        return f"<math>{latex}</math>"
+
+    # ======================
     # Listy
     # ======================
 

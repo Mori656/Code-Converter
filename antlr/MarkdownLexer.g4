@@ -25,11 +25,13 @@ LINK_HREF_OPEN  : '(' ;
 LINK_HREF_CLOSE : ')' ;
 IMAGE           : '!' ;
 
-TEXT    : ~[#\r\n`*1>~[\]()!]+ ;
+TEXT    : ~[#\r\n`*1>~[\]()!$]+ ;
 
 
 // The token that starts the new mode (must be last among tokens starting with the same characters)
 TRIPLE_BACKTICK : '```' NEWLINE -> pushMode(CodeBlockMode) ;
+
+LATEX_START : '$$' NEWLINE -> pushMode(LatexMode) ;
 
 // New Lexer Mode for Fenced Code Block Content
 mode CodeBlockMode;
@@ -39,3 +41,11 @@ CODE_BLOCK_CONTENT : ~[`]+  ;
 
 // This token switches the lexer back to the default mode
 CODE_BLOCK_END : '```' -> popMode ;
+
+
+// LaTeX mode
+mode LatexMode ;
+
+LATEX_CONTENT : ~[$]+ ;
+
+LATEX_END : '$$' -> popMode;

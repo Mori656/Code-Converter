@@ -14,6 +14,7 @@ block : heading1
       | heading5
       | heading6
       | codeBlock
+      | latexBlock
       | unorderedList
       | orderedList
       | blockquote
@@ -100,6 +101,9 @@ inlineContentLine : (inlineElement)+ NEWLINE ; // A line of text followed by a s
 
 // Rule for a fenced code block
 codeBlock : TRIPLE_BACKTICK CODE_BLOCK_CONTENT* CODE_BLOCK_END NEWLINE ;
+
+// Rule for Latex mode
+latexBlock : LATEX_START LATEX_CONTENT* LATEX_END NEWLINE ;
 
 // Rule for lists
 unorderedList
