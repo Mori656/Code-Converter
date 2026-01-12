@@ -5,7 +5,6 @@ from antlr.HtmlVisitor import MarkdownToHtmlVisitor as HtmlVisitor
 
 def test_markdown_parsing():
     input_stream = FileStream("test.md", encoding="utf-8")
-    print(type(input_stream))
     lexer = MarkdownLexer(input_stream)
     tokens = CommonTokenStream(lexer)
 
@@ -40,7 +39,5 @@ def markdown_to_html(markdown: str) -> str:
     return html
 
 if __name__ == "__main__":
-    # print("Running markdown parser ...")
-    # test_markdown_parsing()
-    html = markdown_to_html("*test*\n")
-    print(html)
+    print("Running markdown parser ...")
+    test_markdown_parsing()
