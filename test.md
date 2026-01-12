@@ -31,3 +31,8 @@ Or an image of bears
 ![bears](http://placebear.com/200/200)
 
 The end ...
+
+$$
+\pi \approx \frac{22}{7}
+$$
+
