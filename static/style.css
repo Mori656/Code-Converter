@@ -71,13 +71,16 @@ html,body{
   border:1px dashed #e6e9ef;
   border-radius:6px;
   background:linear-gradient(180deg,#fff,#fbfdff);
-  font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
   font-size:14px;
   color:#111;
   overflow:auto;
-  white-space:pre-wrap;
   word-wrap:break-word;
   scrollbar-color: lightblue #f7f8fa;
+}
+
+.preview-raw {
+  font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+  white-space:pre-wrap;
 }
 
 .button{
