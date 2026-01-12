@@ -66,8 +66,8 @@ def latex_to_html(latex: str) -> str:
     return html
 
 if __name__ == "__main__":
-    # print("Running markdown parser ...")
-    # test_markdown_parsing()
-    print("Running LaTeX parser ...")
-    html = latex_to_html(r"\pi \approx \frac{22}{7}")
-    print(html)
+    print("Running markdown parser ...")
+    test_markdown_parsing()
+    # print("Running LaTeX parser ...")
+    # html = latex_to_html(r"\pi \approx \frac{22}{7}")
+    # print(html)

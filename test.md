@@ -35,4 +35,3 @@ The end ...
 $$
 \pi \approx \frac{22}{7}
 $$
-

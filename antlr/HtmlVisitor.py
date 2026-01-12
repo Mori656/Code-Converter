@@ -1,7 +1,9 @@
 from antlr4 import *
 from antlr.MarkdownParserVisitor import MarkdownParserVisitor
 from antlr.MarkdownParser import MarkdownParser
-
+from antlrLatex.LatexLexer import LatexLexer
+from antlrLatex.LatexParser import LatexParser
+from antlrLatex.HtmlVisitorLatex import LatexToHtmlVisitor as HtmlVisitorLatex
 
 class MarkdownToHtmlVisitor(MarkdownParserVisitor):
 
@@ -103,7 +105,21 @@ class MarkdownToHtmlVisitor(MarkdownParserVisitor):
     # ======================
 
     def visitLatexBlock(self, ctx: MarkdownParser.LatexBlockContext):
-        latex = ctx.getText().replace("$", "").strip()
+        # input_stream = InputStream(latex)
+        text = ctx.getText().replace("$", "").strip()
+        input_stream = InputStream(text)
+
+        lexer = LatexLexer(input_stream)
+        tokens = CommonTokenStream(lexer)
+
+        parser = LatexParser(tokens)
+        tree = parser.expr()
+
+        visitor = HtmlVisitorLatex()
+        print(tree.toStringTree(recog=parser))
+        latex = visitor.visit(tree)
+        print(latex)
+
         return f"<math>{latex}</math>"
 
     # ======================
