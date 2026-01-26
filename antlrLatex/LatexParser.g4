@@ -15,8 +15,13 @@ fraction : FRAC LBRACE expr RBRACE LBRACE expr RBRACE ;
 
 root : SQRT ( LBRACK expr RBRACK )? LBRACE expr RBRACE ;
 
-scriptable
-    : atom (scriptOp atom)? (scriptOp atom)? ;
+scriptable : atom
+           | atom superscript (subscript)?
+           | atom subscript (superscript)?
+           ;
+
+subscript : UNDERSCORE atom ;
+superscript : CARET atom ;
 
 scriptOp
     : CARET

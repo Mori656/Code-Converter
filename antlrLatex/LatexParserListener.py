@@ -35,12 +35,39 @@ class LatexParserListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by LatexParser#root.
+    def enterRoot(self, ctx:LatexParser.RootContext):
+        pass
+
+    # Exit a parse tree produced by LatexParser#root.
+    def exitRoot(self, ctx:LatexParser.RootContext):
+        pass
+
+
     # Enter a parse tree produced by LatexParser#scriptable.
     def enterScriptable(self, ctx:LatexParser.ScriptableContext):
         pass
 
     # Exit a parse tree produced by LatexParser#scriptable.
     def exitScriptable(self, ctx:LatexParser.ScriptableContext):
+        pass
+
+
+    # Enter a parse tree produced by LatexParser#subscript.
+    def enterSubscript(self, ctx:LatexParser.SubscriptContext):
+        pass
+
+    # Exit a parse tree produced by LatexParser#subscript.
+    def exitSubscript(self, ctx:LatexParser.SubscriptContext):
+        pass
+
+
+    # Enter a parse tree produced by LatexParser#superscript.
+    def enterSuperscript(self, ctx:LatexParser.SuperscriptContext):
+        pass
+
+    # Exit a parse tree produced by LatexParser#superscript.
+    def exitSuperscript(self, ctx:LatexParser.SuperscriptContext):
         pass
 
 

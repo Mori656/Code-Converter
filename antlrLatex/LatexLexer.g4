@@ -27,8 +27,8 @@ TILDE       : '~' ;
 // Fraction commands
 FRAC        : BACKSLASH 'frac' ;
 
-// Function commands
-//FUNCTION    : BACKSLASH ( 'sin' | 'cos' | 'tan' | 'log' | 'ln' | 'exp' ) ;
+// Root commands
+SQRT        : BACKSLASH 'sqrt' ;
 
 // Generic commands (constants, Greek letters, operators, etc.)
 COMMAND     : BACKSLASH [a-zA-Z]+ ;

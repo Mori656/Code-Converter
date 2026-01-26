@@ -154,33 +154,24 @@ class LatexToHtmlVisitor(LatexParserVisitor):
             return f"<msqrt>{num}</msqrt>"
 
     def visitScriptable(self, ctx: LatexParser.ScriptableContext):
-        base = self.visit(ctx.atom(0))
-        scripts = ctx.scriptOp()
-        atoms = ctx.atom()[1:]
+        base = self.visit(ctx.atom())
+        sub = None
+        sup = None
 
-        if not scripts:
-            return base
+        if ctx.subscript():
+            sub = self.visit(ctx.subscript().atom())
 
-        # 2-script version (sub + sup or sup + sub)
-        if len(scripts) == 2:
-            op1, op2 = scripts
-            a1, a2 = atoms
-            sub = self.visit(a1) if op1.getText() == '_' else None
-            sup = self.visit(a1) if op1.getText() == '^' else None
-            sub2 = self.visit(a2) if op2.getText() == '_' else None
-            sup2 = self.visit(a2) if op2.getText() == '^' else None
-            # merge order-insensitive
-            sub = sub or sub2
-            sup = sup or sup2
+        if ctx.superscript():
+            sup = self.visit(ctx.superscript().atom())
+
+        if sub and sup:
             return f"<msubsup>{base}{sub}{sup}</msubsup>"
-
-        # single script
-        op = scripts[0].getText()
-        val = self.visit(atoms[0])
-        if op == '^':
-            return f"<msup>{base}{val}</msup>"
+        elif sub:
+            return f"<msub>{base}{sub}</msub>"
+        elif sup:
+            return f"<msup>{base}{sup}</msup>"
         else:
-            return f"<msub>{base}{val}</msub>"
+            return base
 
     def visitAtom(self, ctx: LatexParser.AtomContext):
         if ctx.NUMBER():
@@ -192,7 +183,6 @@ class LatexToHtmlVisitor(LatexParserVisitor):
             if ctxmnd in self.LATEX_OPERATORS:
                 return f"<mo>{self.LATEX_OPERATORS[ctxmnd]}</mo>\n"
             return f"<mi>{self.LATEX_COMMANDS[ctxmnd] if ctxmnd in self.LATEX_COMMANDS else ctxmnd}</mi>\n"
-
         if ctx.operator():
             return f"<mo>{ctx.operator().getText()}</mo>"
         if ctx.LPAREN():

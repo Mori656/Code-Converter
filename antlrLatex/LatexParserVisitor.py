@@ -24,8 +24,23 @@ class LatexParserVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by LatexParser#root.
+    def visitRoot(self, ctx:LatexParser.RootContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by LatexParser#scriptable.
     def visitScriptable(self, ctx:LatexParser.ScriptableContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by LatexParser#subscript.
+    def visitSubscript(self, ctx:LatexParser.SubscriptContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by LatexParser#superscript.
+    def visitSuperscript(self, ctx:LatexParser.SuperscriptContext):
         return self.visitChildren(ctx)
 
 
