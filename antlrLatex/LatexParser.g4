@@ -7,12 +7,13 @@ expr : term+ ;
 
 term
     : fraction
+    | root
     | scriptable
     ;
 
-fraction
-    : FRAC LBRACE expr RBRACE LBRACE expr RBRACE
-    ;
+fraction : FRAC LBRACE expr RBRACE LBRACE expr RBRACE ;
+
+root : SQRT ( LBRACK expr RBRACK )? LBRACE expr RBRACE ;
 
 scriptable
     : atom (scriptOp atom)? (scriptOp atom)? ;

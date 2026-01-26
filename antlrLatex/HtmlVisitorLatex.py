@@ -132,6 +132,8 @@ class LatexToHtmlVisitor(LatexParserVisitor):
     def visitTerm(self, ctx: LatexParser.TermContext):
         if ctx.fraction():
             return self.visit(ctx.fraction())
+        elif ctx.root():
+            return self.visit(ctx.root())
         else:
             return self.visit(ctx.scriptable())
 
@@ -139,6 +141,17 @@ class LatexToHtmlVisitor(LatexParserVisitor):
         num = self.visit(ctx.expr(0))
         den = self.visit(ctx.expr(1))
         return f"<mfrac>{num}{den}</mfrac>"
+
+    def visitRoot(self, ctx: LatexParser.RootContext):
+        if (len(ctx.expr()) == 2):
+            # nth root version
+            degree = self.visit(ctx.expr(0))
+            num    = self.visit(ctx.expr(1))
+            return f"<mroot>{num}{degree}</mroot>"
+        else:
+            # square root version
+            num    = self.visit(ctx.expr(0))
+            return f"<msqrt>{num}</msqrt>"
 
     def visitScriptable(self, ctx: LatexParser.ScriptableContext):
         base = self.visit(ctx.atom(0))
