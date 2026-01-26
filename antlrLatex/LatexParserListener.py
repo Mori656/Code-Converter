@@ -17,138 +17,66 @@ class LatexParserListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by LatexParser#relationExpr.
-    def enterRelationExpr(self, ctx:LatexParser.RelationExprContext):
+    # Enter a parse tree produced by LatexParser#term.
+    def enterTerm(self, ctx:LatexParser.TermContext):
         pass
 
-    # Exit a parse tree produced by LatexParser#relationExpr.
-    def exitRelationExpr(self, ctx:LatexParser.RelationExprContext):
-        pass
-
-
-    # Enter a parse tree produced by LatexParser#relationOp.
-    def enterRelationOp(self, ctx:LatexParser.RelationOpContext):
-        pass
-
-    # Exit a parse tree produced by LatexParser#relationOp.
-    def exitRelationOp(self, ctx:LatexParser.RelationOpContext):
+    # Exit a parse tree produced by LatexParser#term.
+    def exitTerm(self, ctx:LatexParser.TermContext):
         pass
 
 
-    # Enter a parse tree produced by LatexParser#additiveExpr.
-    def enterAdditiveExpr(self, ctx:LatexParser.AdditiveExprContext):
+    # Enter a parse tree produced by LatexParser#fraction.
+    def enterFraction(self, ctx:LatexParser.FractionContext):
         pass
 
-    # Exit a parse tree produced by LatexParser#additiveExpr.
-    def exitAdditiveExpr(self, ctx:LatexParser.AdditiveExprContext):
-        pass
-
-
-    # Enter a parse tree produced by LatexParser#addOp.
-    def enterAddOp(self, ctx:LatexParser.AddOpContext):
-        pass
-
-    # Exit a parse tree produced by LatexParser#addOp.
-    def exitAddOp(self, ctx:LatexParser.AddOpContext):
+    # Exit a parse tree produced by LatexParser#fraction.
+    def exitFraction(self, ctx:LatexParser.FractionContext):
         pass
 
 
-    # Enter a parse tree produced by LatexParser#multiplicativeExpr.
-    def enterMultiplicativeExpr(self, ctx:LatexParser.MultiplicativeExprContext):
+    # Enter a parse tree produced by LatexParser#scriptable.
+    def enterScriptable(self, ctx:LatexParser.ScriptableContext):
         pass
 
-    # Exit a parse tree produced by LatexParser#multiplicativeExpr.
-    def exitMultiplicativeExpr(self, ctx:LatexParser.MultiplicativeExprContext):
-        pass
-
-
-    # Enter a parse tree produced by LatexParser#multOp.
-    def enterMultOp(self, ctx:LatexParser.MultOpContext):
-        pass
-
-    # Exit a parse tree produced by LatexParser#multOp.
-    def exitMultOp(self, ctx:LatexParser.MultOpContext):
+    # Exit a parse tree produced by LatexParser#scriptable.
+    def exitScriptable(self, ctx:LatexParser.ScriptableContext):
         pass
 
 
-    # Enter a parse tree produced by LatexParser#postfixExpr.
-    def enterPostfixExpr(self, ctx:LatexParser.PostfixExprContext):
+    # Enter a parse tree produced by LatexParser#scriptOp.
+    def enterScriptOp(self, ctx:LatexParser.ScriptOpContext):
         pass
 
-    # Exit a parse tree produced by LatexParser#postfixExpr.
-    def exitPostfixExpr(self, ctx:LatexParser.PostfixExprContext):
-        pass
-
-
-    # Enter a parse tree produced by LatexParser#postfixOp.
-    def enterPostfixOp(self, ctx:LatexParser.PostfixOpContext):
-        pass
-
-    # Exit a parse tree produced by LatexParser#postfixOp.
-    def exitPostfixOp(self, ctx:LatexParser.PostfixOpContext):
+    # Exit a parse tree produced by LatexParser#scriptOp.
+    def exitScriptOp(self, ctx:LatexParser.ScriptOpContext):
         pass
 
 
-    # Enter a parse tree produced by LatexParser#primaryExpr.
-    def enterPrimaryExpr(self, ctx:LatexParser.PrimaryExprContext):
+    # Enter a parse tree produced by LatexParser#atom.
+    def enterAtom(self, ctx:LatexParser.AtomContext):
         pass
 
-    # Exit a parse tree produced by LatexParser#primaryExpr.
-    def exitPrimaryExpr(self, ctx:LatexParser.PrimaryExprContext):
-        pass
-
-
-    # Enter a parse tree produced by LatexParser#fracExpr.
-    def enterFracExpr(self, ctx:LatexParser.FracExprContext):
-        pass
-
-    # Exit a parse tree produced by LatexParser#fracExpr.
-    def exitFracExpr(self, ctx:LatexParser.FracExprContext):
+    # Exit a parse tree produced by LatexParser#atom.
+    def exitAtom(self, ctx:LatexParser.AtomContext):
         pass
 
 
-    # Enter a parse tree produced by LatexParser#functionExpr.
-    def enterFunctionExpr(self, ctx:LatexParser.FunctionExprContext):
+    # Enter a parse tree produced by LatexParser#nbsp.
+    def enterNbsp(self, ctx:LatexParser.NbspContext):
         pass
 
-    # Exit a parse tree produced by LatexParser#functionExpr.
-    def exitFunctionExpr(self, ctx:LatexParser.FunctionExprContext):
-        pass
-
-
-    # Enter a parse tree produced by LatexParser#group.
-    def enterGroup(self, ctx:LatexParser.GroupContext):
-        pass
-
-    # Exit a parse tree produced by LatexParser#group.
-    def exitGroup(self, ctx:LatexParser.GroupContext):
+    # Exit a parse tree produced by LatexParser#nbsp.
+    def exitNbsp(self, ctx:LatexParser.NbspContext):
         pass
 
 
-    # Enter a parse tree produced by LatexParser#numberAtom.
-    def enterNumberAtom(self, ctx:LatexParser.NumberAtomContext):
+    # Enter a parse tree produced by LatexParser#operator.
+    def enterOperator(self, ctx:LatexParser.OperatorContext):
         pass
 
-    # Exit a parse tree produced by LatexParser#numberAtom.
-    def exitNumberAtom(self, ctx:LatexParser.NumberAtomContext):
-        pass
-
-
-    # Enter a parse tree produced by LatexParser#identAtom.
-    def enterIdentAtom(self, ctx:LatexParser.IdentAtomContext):
-        pass
-
-    # Exit a parse tree produced by LatexParser#identAtom.
-    def exitIdentAtom(self, ctx:LatexParser.IdentAtomContext):
-        pass
-
-
-    # Enter a parse tree produced by LatexParser#commandAtom.
-    def enterCommandAtom(self, ctx:LatexParser.CommandAtomContext):
-        pass
-
-    # Exit a parse tree produced by LatexParser#commandAtom.
-    def exitCommandAtom(self, ctx:LatexParser.CommandAtomContext):
+    # Exit a parse tree produced by LatexParser#operator.
+    def exitOperator(self, ctx:LatexParser.OperatorContext):
         pass
 
 

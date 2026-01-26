@@ -7,7 +7,7 @@ from antlrLatex.LatexParser import LatexParser
 from antlrLatex.HtmlVisitorLatex import LatexToHtmlVisitor as HtmlVisitorLatex
 
 def test_markdown_parsing():
-    input_stream = FileStream("test.md", encoding="utf-8")
+    input_stream = FileStream("testlatex.md", encoding="utf-8")
     lexer = MarkdownLexer(input_stream)
     tokens = CommonTokenStream(lexer)
 
@@ -44,7 +44,7 @@ def markdown_to_html(markdown: str) -> str:
 def latex_to_html(latex: str) -> str:
     # input_stream = InputStream(latex)
 
-    input_stream = FileStream("antlrLatex/test.tex", encoding="utf-8")
+    input_stream = FileStream("./antlr/test.md", encoding="utf-8")
     lexer = LatexLexer(input_stream)
     tokens = CommonTokenStream(lexer)
 

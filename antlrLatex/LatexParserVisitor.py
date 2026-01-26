@@ -14,78 +14,38 @@ class LatexParserVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by LatexParser#relationExpr.
-    def visitRelationExpr(self, ctx:LatexParser.RelationExprContext):
+    # Visit a parse tree produced by LatexParser#term.
+    def visitTerm(self, ctx:LatexParser.TermContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by LatexParser#relationOp.
-    def visitRelationOp(self, ctx:LatexParser.RelationOpContext):
+    # Visit a parse tree produced by LatexParser#fraction.
+    def visitFraction(self, ctx:LatexParser.FractionContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by LatexParser#additiveExpr.
-    def visitAdditiveExpr(self, ctx:LatexParser.AdditiveExprContext):
+    # Visit a parse tree produced by LatexParser#scriptable.
+    def visitScriptable(self, ctx:LatexParser.ScriptableContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by LatexParser#addOp.
-    def visitAddOp(self, ctx:LatexParser.AddOpContext):
+    # Visit a parse tree produced by LatexParser#scriptOp.
+    def visitScriptOp(self, ctx:LatexParser.ScriptOpContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by LatexParser#multiplicativeExpr.
-    def visitMultiplicativeExpr(self, ctx:LatexParser.MultiplicativeExprContext):
+    # Visit a parse tree produced by LatexParser#atom.
+    def visitAtom(self, ctx:LatexParser.AtomContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by LatexParser#multOp.
-    def visitMultOp(self, ctx:LatexParser.MultOpContext):
+    # Visit a parse tree produced by LatexParser#nbsp.
+    def visitNbsp(self, ctx:LatexParser.NbspContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by LatexParser#postfixExpr.
-    def visitPostfixExpr(self, ctx:LatexParser.PostfixExprContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by LatexParser#postfixOp.
-    def visitPostfixOp(self, ctx:LatexParser.PostfixOpContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by LatexParser#primaryExpr.
-    def visitPrimaryExpr(self, ctx:LatexParser.PrimaryExprContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by LatexParser#fracExpr.
-    def visitFracExpr(self, ctx:LatexParser.FracExprContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by LatexParser#functionExpr.
-    def visitFunctionExpr(self, ctx:LatexParser.FunctionExprContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by LatexParser#group.
-    def visitGroup(self, ctx:LatexParser.GroupContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by LatexParser#numberAtom.
-    def visitNumberAtom(self, ctx:LatexParser.NumberAtomContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by LatexParser#identAtom.
-    def visitIdentAtom(self, ctx:LatexParser.IdentAtomContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by LatexParser#commandAtom.
-    def visitCommandAtom(self, ctx:LatexParser.CommandAtomContext):
+    # Visit a parse tree produced by LatexParser#operator.
+    def visitOperator(self, ctx:LatexParser.OperatorContext):
         return self.visitChildren(ctx)
 
 

@@ -2,72 +2,46 @@ parser grammar LatexParser;
 
 options { tokenVocab=LatexLexer; }
 
-// Entry point
-expr : relationExpr ;
+// entry point
+expr : term+ ;
 
-// Level 5: relation / comparisons
-relationExpr
-    : additiveExpr (relationOp additiveExpr)*
+term
+    : fraction
+    | scriptable
     ;
 
-relationOp
-    : EQUALS
+fraction
+    : FRAC LBRACE expr RBRACE LBRACE expr RBRACE
+    ;
+
+scriptable
+    : atom (scriptOp atom)? (scriptOp atom)? ;
+
+scriptOp
+    : CARET
+    | UNDERSCORE
+    ;
+
+atom
+    : NUMBER
+    | IDENT
+    | COMMAND
+    | LPAREN expr RPAREN
+    | LBRACE expr RBRACE
+    | operator
+    | nbsp
+    ;
+
+nbsp : TILDE ;
+
+operator
+    : EXCLAMATION
+    | ASTERISK
+    | SLASH
+    | PLUS
+    | MINUS
     | LT
     | GT
-    | COMMAND        // constants used as infix operators, e.g. \approx, \leq
+    | EQUALS
+    | DOT
     ;
-
-// Level 4: addition/subtraction
-additiveExpr
-    : multiplicativeExpr (addOp multiplicativeExpr)*
-    ;
-
-addOp : PLUS | MINUS ;
-
-// Level 3: multiplication
-multiplicativeExpr
-    : postfixExpr (multOp postfixExpr)*
-    ;
-
-multOp : STAR | SLASH ;
-
-// Level 2: postfix (sup/sub)
-postfixExpr
-    : primaryExpr (postfixOp primaryExpr)*
-    ;
-
-postfixOp : CARET | UNDERSCORE ;
-
-// Level 1: primaries
-primaryExpr
-    : fracExpr
-    | functionExpr
-    | numberAtom
-    | identAtom
-    | commandAtom
-    | group
-    ;
-
-fracExpr
-    : COMMAND LBRACE expr RBRACE LBRACE expr RBRACE
-    ;
-
-functionExpr
-    : FUNCTIONCMD primaryExpr+
-    ;
-
-group
-    : LBRACE expr RBRACE
-    | LPAREN expr RPAREN
-    ;
-
-
-//atom
-//    : NUMBER
-//    | IDENT
-//    | COMMAND   // constants like \pi
-//    ;
-
-numberAtom  : NUMBER  ;
-identAtom  :  IDENT   ;
-commandAtom : COMMAND ;
